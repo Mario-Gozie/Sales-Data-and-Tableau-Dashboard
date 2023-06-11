@@ -29,21 +29,17 @@ The dataset came structually dirty. I restructured it with excel and put it into
 * A **Bar Chart** for Sales Person Performance.
 
 
-## GENERAL SUMMARY AND INSIGHT
-* The shop made sales of over 1.3 million for two years but it saw a decrease of a bit above 51% in sales in the year 2019 compared to 2018.
-* Quantity of item sold dropped by almost 20% in 2019 
-* The shop had 4 managers in both years and 11 sales persons in total with one dropping in 2019.
-* The best performing sales person's for both years is Alexandra with Shelli being the least performing sales person in sale.
-
-
-
 ## THE DASHBOARD
 
 ![Alt Text](https://github.com/Mario-Gozie/Sales-Data-and-Tableau-Dashboard/blob/main/Images/Dashboard.png)
 
 
 
-
+## GENERAL SUMMARY AND INSIGHT
+* The shop made sales of over **1.3 million** for two years but it saw a decrease of a bit above **51%** in sales in the year 2019 compared to 2018.
+* Quantity of item sold dropped by almost **20%** in 2019 
+* The shop had **4 managers** in both years and 11 sales persons in total with one dropping in 2019.
+* The best performing sales person's for both years is **Alexandra** with **Shelli** being the least performing sales person in sale.
 
 
 
