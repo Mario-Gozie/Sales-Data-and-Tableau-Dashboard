@@ -203,11 +203,25 @@ year_total)*100),2),' %') as propotion from total_years;`
 
 ![Alt Text]()
 
+### TOTAL SALES PER SALESPERSON IRRESPECTIVE OF YEAR. 
+
+`select distinct([sales Man]), sum([sale Amount]) 
+as total_sales from Sales_Data_Cleaned
+group by [Sales Man]
+order by total_sales desc;`
 
 ![Alt Text]()
 
+### TOTAL SALES PER SALESPERSON PER YEAR.
 
+`select distinct year(date) as years, [Sales Man], sum([sale Amount])
+over(partition by year(date), [Sales Man] order by [Sales Man])
+as Total_per_sale_Person
+from Sales_Data_Cleaned;`
 ![Alt Text]()
+
+
+
 
 ## DASHBOARD FEATURES
 * A **Year filter** hidden in a button at the top right corner of the dashboard.
