@@ -149,6 +149,8 @@ as sales_propotion
 from Sales_Data_Cleaned
 group by Manager;`
 
+![Alt Text]()
+
 ### PERFORMANCE OF MANAGERS PER YEAR. 
 
 `with partial_sum as (select year(date) as Years, Manager,
@@ -162,6 +164,8 @@ order by years) as amount_per_year from partial_sum)`
 
 `select Years, Manager, concat(round(((Amount_per_manager/amount_per_year)* 100),2),' %') as propotion
 from include_sum_per_year;`
+
+![Alt Text]()
 
 ### QUANTITY SOLD PER ITEM IRRESPECTIVE OF THE YEAR.  
 
@@ -187,6 +191,7 @@ Total_Revenue from Sales_Data_Cleaned`
 from Sales_Data_Cleaned
 group by Region;`
 
+![Alt Text]()
 
 ### PROPORTION OF SALES FOR EACH REGION PER YEAR 
 
