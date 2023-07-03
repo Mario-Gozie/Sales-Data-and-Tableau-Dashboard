@@ -14,7 +14,23 @@ _**NB: This is a dummy dataset and does not represent any organization. it is ju
 * Tableau
 * SQL
 
-## THE TASK WITH SQL
+## THE TASK
+
+A small shop owner wants to know about his sales in 2018 and 2019 so he could know if there is a notable growth in his business. processing this details from an excel spreadsheet was difficult for him so he decided to higher a data analyst to analyse and visalize data from these two years for him.
+
+## VIEWING OF DATA AND STRUCTURAL CLEANING IN EXCEL.
+
+* The Data came a bit structurally deformed so I used excel to fix it.
+
+  **Before cleaning**
+
+  ![Alt Text](https://github.com/Mario-Gozie/Sales-Data-and-Tableau-Dashboard/blob/main/Images/Screenshot%20(384).png)
+
+  **After Cleaning**
+
+  ![Alt Text](https://github.com/Mario-Gozie/Sales-Data-and-Tableau-Dashboard/blob/main/Images/Screenshot%20(385).png)
+
+## TACKLING THE TASK WITH SQL
 
 ### VIEWING TABLE
 
@@ -251,7 +267,7 @@ from Sales_Data_Cleaned;`
 
 ![Alt Text](https://github.com/Mario-Gozie/Sales-Data-and-Tableau-Dashboard/blob/main/Images/Dashboard.png)
 
-
+To interact with the dashboard, you could use this [link](https://public.tableau.com/app/profile/chigozirim.nwasinachi.oguedoihu/viz/Asmallshopvisual/Dashboard3)
 
 ## GENERAL SUMMARY AND INSIGHT
 * The shop made sales of over **1.3 million** for two years but it saw a decrease of a bit above **51%** in sales in the year 2019 compared to 2018.
