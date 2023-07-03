@@ -20,6 +20,8 @@ _**NB: This is a dummy dataset and does not represent any organization. it is ju
 
 `Select * from Sales_Data_Cleaned;`
 
+![Alt Text](https://github.com/Mario-Gozie/Sales-Data-and-Tableau-Dashboard/blob/main/Images/first%20view_Table.png)
+
 ## DATA CLEANING
 
 * I queried the database and noticed there are null values and had to delete them to ease Analysis.
@@ -27,22 +29,26 @@ _**NB: This is a dummy dataset and does not represent any organization. it is ju
 `select * from Sales_Data_Cleaned
 where Date is null;`
 
+![Alt Text](https://github.com/Mario-Gozie/Sales-Data-and-Tableau-Dashboard/blob/main/Images/viewing%20for%20null%20columns%20Data%20cleaning.png)
+
 `delete from Sales_Data_Cleaned
 where Date is null;`
 
-![Alt Text]()
+![Alt Text](https://github.com/Mario-Gozie/Sales-Data-and-Tableau-Dashboard/blob/main/Images/Deleting%20the%20null%20rows.png)
 
 ### TOTAL SALES IRRESPECTIVE OF THE YEAR
 
 `select sum([sale Amount]) as Total_sales from Sales_Data_Cleaned`
 
-![Alt Text]()
+![Alt Text](https://github.com/Mario-Gozie/Sales-Data-and-Tableau-Dashboard/blob/main/Images/Total_Amount%20of%20all%20years.png)
 
 ### TOTAL SALAES PER YEAR
 
 `select year(Date) as Years,sum([Sale Amount]) as 
 Year_Total_sales from Sales_Data_Cleaned
 group by year(Date);`
+
+![Alt Text](https://github.com/Mario-Gozie/Sales-Data-and-Tableau-Dashboard/blob/main/Images/Total%20sales%20per%20year.png)
 
 ### TOTAL SALES PER YEAR AND MONTH
 
@@ -51,7 +57,7 @@ sum([Sale Amount]) as Total_sales from Sales_Data_Cleaned
 group by YEAR(date), DATENAME(Month, date);`
 
 
-![Alt Text]()
+![Alt Text](https://github.com/Mario-Gozie/Sales-Data-and-Tableau-Dashboard/blob/main/Images/Total%20sales%20year%20and%20month.png)
 
 * Alternatively, it can be put in a pivot table.
   
@@ -61,17 +67,19 @@ group by YEAR(date), DATENAME(Month, date);`
 `select * from yet_to_pivot
 pivot(sum([Sale Amount]) for Years in ([2018], [2019])) as my_pivot`
 
+![Alt Text](https://github.com/Mario-Gozie/Sales-Data-and-Tableau-Dashboard/blob/main/Images/Total%20sales%20year%20month%20in%20pivot%20table.png)
+
 ### TOTAL ITEM SOLD
 `select sum(units) as total_items_sold from Sales_Data_Cleaned;`
 
-![Alt Text]()
+![Alt Text](https://github.com/Mario-Gozie/Sales-Data-and-Tableau-Dashboard/blob/main/Images/quantity%20of%20item%20sold%20irrespective%20of%20year.png)
 
 ### TOTAL ITEM SOLD PER YEAR
 
 `select year(date) as Years, sum(units) as total_item_sold from Sales_Data_Cleaned
 group by year(date);`
 
-![Alt Text]()
+![Alt Text](https://github.com/Mario-Gozie/Sales-Data-and-Tableau-Dashboard/blob/main/Images/Total%20items%20sold%20irrespective%20of%20year%20years.png)
 
 ### TOTAL ITEM SOLD PER YEAR AND MONTH
 
@@ -79,7 +87,7 @@ group by year(date);`
 SUM(UNITS) as total_items from Sales_Data_Cleaned
 group by year(date), DATENAME(month, date);`
 
-![Alt Text]()
+![Alt Text](https://github.com/Mario-Gozie/Sales-Data-and-Tableau-Dashboard/blob/main/Images/item%20sold%20per%20year%20and%20month.png)
 
 * Alternatively, I put it into a pivot table.
   
@@ -89,13 +97,13 @@ datename(month, date) as Months, units from sales_data_cleaned)`
 `select * from yet_to_pivot
 pivot(sum(units) for years in ([2018],[2019])) as my_pivot;`
 
-![Alt Text]()
+![Alt Text](https://github.com/Mario-Gozie/Sales-Data-and-Tableau-Dashboard/blob/main/Images/item%20sold%20per%20year%20and%20month%20in%20pivot.png)
 
 ### TOTAL MANAGERS
 
 `select count(distinct(manager)) as Managers from Sales_Data_Cleaned`
 
-![Alt Text]()
+![Alt Text](https://github.com/Mario-Gozie/Sales-Data-and-Tableau-Dashboard/blob/main/Images/Total%20Numbe%20of%20mangers%20irrespective%20of%20year.png)
 
 
 ### TOTAL MANAGERS PER YEAR
@@ -104,7 +112,7 @@ pivot(sum(units) for years in ([2018],[2019])) as my_pivot;`
 as mangers from Sales_Data_Cleaned
 group by year(date);`
 
-![Alt Text]()
+![Alt Text](https://github.com/Mario-Gozie/Sales-Data-and-Tableau-Dashboard/blob/main/Images/Total%20managers%20per%20year.png)
 
 
 ### TOTAL MANAGERS PER YEAR AND MONTH
@@ -130,7 +138,7 @@ group by Year(date), datename(MONTH, DATE);`
 AS Total_sales_man from Sales_Data_Cleaned
 group by year(date);`
 
-![Alt Text]()
+![Alt Text](https://github.com/Mario-Gozie/Sales-Data-and-Tableau-Dashboard/blob/main/Images/Sales%20man%20per%20year.png)
 
 ### TOTAL SALESPERSON PER YEAR AND MONTH
 
@@ -138,7 +146,7 @@ group by year(date);`
 AS Total_sales_man from Sales_Data_Cleaned
 group by year(date), datename(month, date);`
 
-![Alt Text]()
+![Alt Text](https://github.com/Mario-Gozie/Sales-Data-and-Tableau-Dashboard/blob/main/Images/Sales%20man%20per%20year%20and%20month.png)
 
 
 ### PERFORMANCE OF MANAGERS FOR SALES IN PROPORTION FOR ALL YEARS. 
@@ -149,7 +157,7 @@ as sales_propotion
 from Sales_Data_Cleaned
 group by Manager;`
 
-![Alt Text]()
+![Alt Text](https://github.com/Mario-Gozie/Sales-Data-and-Tableau-Dashboard/blob/main/Images/Propotion%20contribution%20of%20managers%20irrespective%20of%20year.png)
 
 ### PERFORMANCE OF MANAGERS PER YEAR. 
 
@@ -165,7 +173,7 @@ order by years) as amount_per_year from partial_sum)`
 `select Years, Manager, concat(round(((Amount_per_manager/amount_per_year)* 100),2),' %') as propotion
 from include_sum_per_year;`
 
-![Alt Text]()
+![Alt Text](https://github.com/Mario-Gozie/Sales-Data-and-Tableau-Dashboard/blob/main/Images/Propotion%20of%20managers%20contribution%20per%20year.png)
 
 ### QUANTITY SOLD PER ITEM IRRESPECTIVE OF THE YEAR.  
 
@@ -173,7 +181,7 @@ from include_sum_per_year;`
 Total_Revenue from Sales_Data_Cleaned
 group by item;`
 
-![Alt Text]()
+![Alt Text](https://github.com/Mario-Gozie/Sales-Data-and-Tableau-Dashboard/blob/main/Images/quantity%20of%20item%20sold%20irrespective%20of%20year.png)
 
 ### QUANTITY OF ITEM SOLD PER YEAR
 
