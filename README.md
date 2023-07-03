@@ -129,7 +129,7 @@ group by Year(date), datename(MONTH, DATE);`
 `select count(distinct([sales Man])) total_sales_man from Sales_Data_Cleaned`
 
 
-![Alt Text]()
+![Alt Text](https://github.com/Mario-Gozie/Sales-Data-and-Tableau-Dashboard/blob/main/Images/sales%20man%20irrespective%20of%20year.png)
 
 ### TOTAL SALESPERSON PER YEAR
 
@@ -183,14 +183,14 @@ group by item;`
 
 ![Alt Text](https://github.com/Mario-Gozie/Sales-Data-and-Tableau-Dashboard/blob/main/Images/quantity%20of%20item%20sold%20irrespective%20of%20year.png)
 
-### QUANTITY OF ITEM SOLD PER YEAR
+### SALES PER ITEM SOLD PER YEAR
 
 `select distinct year(date) as years, item, sum([sale Amount]) 
 over(partition by year(date), item order by year(date)) as
 Total_Revenue from Sales_Data_Cleaned`
 
 
-![Alt Text]()
+![Alt Text](https://github.com/Mario-Gozie/Sales-Data-and-Tableau-Dashboard/blob/main/Images/Quantity%20of%20item%20sold%20per%20year.png)
 
 ### SALES PER REGION IN PROPORTION FOR ALL YEARS. 
 
@@ -199,7 +199,7 @@ Total_Revenue from Sales_Data_Cleaned`
 from Sales_Data_Cleaned
 group by Region;`
 
-![Alt Text]()
+![Alt Text](https://github.com/Mario-Gozie/Sales-Data-and-Tableau-Dashboard/blob/main/Images/Propotion%20of%20item%20per%20region%20irrespective%20of%20year.png)
 
 ### PROPORTION OF SALES FOR EACH REGION PER YEAR 
 
@@ -214,7 +214,7 @@ over(partition by years order by years) as year_total from just_totals)`
 year_total)*100),2),' %') as propotion from total_years;`
 
 
-![Alt Text]()
+![Alt Text](https://github.com/Mario-Gozie/Sales-Data-and-Tableau-Dashboard/blob/main/Images/Propotion%20of%20item%20sold%20per%20region%20per%20year.png)
 
 ### TOTAL SALES PER SALESPERSON IRRESPECTIVE OF YEAR. 
 
@@ -223,7 +223,7 @@ as total_sales from Sales_Data_Cleaned
 group by [Sales Man]
 order by total_sales desc;`
 
-![Alt Text]()
+![Alt Text](https://github.com/Mario-Gozie/Sales-Data-and-Tableau-Dashboard/blob/main/Images/total%20sales%20per%20salesman%20irrespective%20of%20year.png)
 
 ### TOTAL SALES PER SALESPERSON PER YEAR.
 
@@ -231,7 +231,8 @@ order by total_sales desc;`
 over(partition by year(date), [Sales Man] order by [Sales Man])
 as Total_per_sale_Person
 from Sales_Data_Cleaned;`
-![Alt Text]()
+
+![Alt Text](https://github.com/Mario-Gozie/Sales-Data-and-Tableau-Dashboard/blob/main/Images/sales%20per%20sales%20man%20per%20year.png)
 
 
 
