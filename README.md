@@ -122,7 +122,7 @@ count(distinct(Manager)) as managers from Sales_Data_Cleaned
 group by Year(date), datename(MONTH, DATE);`
 
 
-![Alt Text]()
+
 
 ### TOTAL SALESPERSON
 
