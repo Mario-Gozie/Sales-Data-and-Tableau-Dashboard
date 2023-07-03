@@ -20,7 +20,7 @@ _**NB: This is a dummy dataset and does not represent any organization. it is ju
 
 `Select * from Sales_Data_Cleaned;`
 
-![Alt Text](https://github.com/Mario-Gozie/Sales-Data-and-Tableau-Dashboard/blob/main/Images/first%20view_Table.png)
+![Alt Text](https://github.com/Mario-Gozie/Sales-Data-and-Tableau-Dashboard/blob/main/Images/Screenshot%20(100).png)
 
 ## DATA CLEANING
 
