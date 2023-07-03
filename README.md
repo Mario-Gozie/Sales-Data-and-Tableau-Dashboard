@@ -10,7 +10,8 @@ This is a Project on a small sales dataset of two years (2018/2019), for explori
 _**NB: This is a dummy dataset and does not represent any organization. it is just for practice**_
 
 ## TOOLS 
-* Figma
+* Excel
+* Figma 
 * Tableau
 * SQL
 
@@ -262,6 +263,7 @@ from Sales_Data_Cleaned;`
 * A **Pie Chart** for Sales by region.
 * A **Bar Chart** for Sales Person Performance.
 
+**_NB_** The dashboard layout was designed using **Figma**
 
 ## THE DASHBOARD
 
